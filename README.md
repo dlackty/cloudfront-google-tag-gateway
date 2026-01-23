@@ -25,7 +25,7 @@ A CloudFront Function to route `/metrics/*` requests to [Google Tag Gateway for 
    ```bash
    aws cloudfront create-function \
      --name google-tag-gateway \
-     --function-config Runtime=cloudfront-js-2.0 \
+     --function-config Runtime=cloudfront-js-2.0,Comment="Google Tag Gateway CF Function" \
      --function-code fileb://function.js
    ```
 
