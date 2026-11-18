@@ -18,6 +18,11 @@ function handler(event) {
 
     cf.updateRequestOrigin({
       domainName: GOOGLE_TAG_GATEWAY_DOMAIN,
+      customOriginConfig: {
+        port: 443,
+        protocol: "https",
+        sslProtocols: ["TLSv1.2"],
+      },
       customHeaders: {
         "x-forwarded-country": country,
         "x-forwarded-region": region,
